@@ -8,6 +8,6 @@ public class CacheSessao extends PoliticaCache{
 
     public Double calculaTempoTotalEscrita()
     {
-        return this.tamanhoArquivo / this.driveArmazenamento.velocidadeEscrita();
+        return this.arquivo.getTamanho() / this.driveArmazenamento.velocidadeEscrita();
     }
 }

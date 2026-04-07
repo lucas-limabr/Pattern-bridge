@@ -11,18 +11,12 @@ public class Arquivo {
 
     private LocalDateTime dataCriacao;
 
-    public Arquivo(String nomeArquivo, Double tamanho, String dataCriacao)
+    public Arquivo(String nomeArquivo, Double tamanho, LocalDateTime dataCriacao)
     {
         this.tamanho = tamanho;
         this.nomeArquivo = nomeArquivo;
-        this.dataCriacao = this.converterParaLocalDate(dataCriacao);
+        this.dataCriacao = dataCriacao;
     }
-
-    private LocalDateTime converterParaLocalDate(String dataCriacao)
-    {
-       return LocalDateTime.parse(dataCriacao);
-    }
-
 
     public Double getTamanho()
     {

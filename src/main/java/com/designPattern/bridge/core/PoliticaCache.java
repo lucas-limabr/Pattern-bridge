@@ -4,8 +4,6 @@ public abstract class PoliticaCache {
 
     protected DriveArmazenamento driveArmazenamento;
 
-    protected Double tamanhoArquivo;
-
     protected Arquivo arquivo;
 
    public PoliticaCache(Arquivo arquivo)
@@ -19,4 +17,9 @@ public abstract class PoliticaCache {
    }
 
    public abstract Double calculaTempoTotalEscrita();
+
+   public Arquivo getArquivo()
+   {
+       return this.arquivo;
+   }
 }
